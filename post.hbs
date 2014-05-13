@@ -1,0 +1,70 @@
+{{!< default}}
+<header class="banner">
+<div class="banner-mask"></div>
+<div class="site-head-content inner">
+<a class="home-blog-title n" href="{{@blog.url}}">{{@blog.title}}</a>
+{{#if @blog.logo}}<a class="blog-logo" href="/"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+<h2 class="blog-description">{{@blog.description}}</h2>
+</div>
+
+</header>
+<div class="h80"></div>
+
+<main class="content single-post" role="main">
+<article class="{{post_class}}">
+
+{{#post}}
+
+<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+<section class="post-content">
+<div class="single-post-inner">
+{{content}}
+</div>
+
+<div class="h80"></div>
+
+<section class="author">
+{{#if author.image}}
+<a href="{{author.website}}" class="post-author-avatar">
+<img src="{{author.image}}" alt="{{author.name}}">
+</a>
+{{/if}}
+
+<h4>{{author.name}}</h4>
+<p>{{author.bio}}</p>
+</section>
+
+</section>
+
+<section class="comment-area">
+<div class="ds-thread"></div>
+</section>
+
+<footer class="post-footer">
+
+
+
+</footer>
+
+{{/post}}
+
+</article>
+
+</main>
+
+<!-- Duoshuo Comment BEGIN -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"luolei"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0]
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+
+
+
+</script>
+<!-- Duoshuo Comment END -->
